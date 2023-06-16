@@ -14,10 +14,12 @@ import  { MatIconModule } from '@angular/material/icon'
 import  { MatButtonModule } from '@angular/material/button'
 import  { MatInputModule } from '@angular/material/input'
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

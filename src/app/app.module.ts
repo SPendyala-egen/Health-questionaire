@@ -15,11 +15,15 @@ import  { MatButtonModule } from '@angular/material/button'
 import  { MatInputModule } from '@angular/material/input'
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { HealthAssistantComponent } from './health-assistant/health-assistant.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideNavComponent
+    SideNavComponent,
+    HealthAssistantComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

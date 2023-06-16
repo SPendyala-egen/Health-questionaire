@@ -1,11 +1,18 @@
 <div class="page-container">
-    <div class="header"></div>
-    <div class="body">
-      <div class="nav">
-        <app-side-nav></app-side-nav>
-      </div>
-      <div class="container">
-        
+  <div class="header">
+    <mat-icon class="material-icons-outlined icon">medical_information</mat-icon>
+    <span class="title">HB Health Assistant</span>
+  </div>
+  <div class="body">
+    <div class="nav" [class.closed]="!isNavOpened">
+      <app-side-nav [isNavOpened]="isNavOpened"></app-side-nav>
+      <div class="button" (click)="isNavOpened = !isNavOpened" matRipple>
+        <mat-icon class="material-icons-outlined">{{ isNavOpened ? 'arrow_circle_left' :
+          'arrow_circle_right'}}</mat-icon>
       </div>
     </div>
+    <div class="container">
+
+    </div>
+  </div>
 </div>

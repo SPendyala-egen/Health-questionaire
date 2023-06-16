@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import { MatRippleModule } from '@angular/material/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatInputModule,
     MatRippleModule,
+    HttpClientModule,
     NgxsModule.forRoot([
       QuestionnaireState
     ]),

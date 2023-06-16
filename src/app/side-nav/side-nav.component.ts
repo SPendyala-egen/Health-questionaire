@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -6,14 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent {
+
+  @Input() isNavOpened: boolean = false;
+  
   navList= [
     {
+      key: 'dashboard',
+      value: 'Dashboard',
+      icon: 'grid_view'
+    },
+    {
       key: 'health-assistant',
-      value: 'Health Assistant'
+      value: 'Health Assistant',
+      icon: 'assistant'
     },
     {
       key: 'about',
-      value: 'About'
+      value: 'About',
+      icon: 'info'
     }
   ]
 }

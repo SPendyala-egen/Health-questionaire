@@ -1,4 +1,5 @@
 <div class="page-container">
+<<<<<<< HEAD
     <div class="header">
       <div class="container">
         <h1 class="header"><i><b>HackBenchers</b></i></h1>
@@ -9,5 +10,22 @@
         <app-side-nav></app-side-nav>
       </div>
    
+=======
+  <div class="header">
+    <mat-icon class="material-icons-outlined icon">medical_information</mat-icon>
+    <span class="title">HB Health Assistant</span>
+  </div>
+  <div class="body">
+    <div class="nav" [class.closed]="!isNavOpened">
+      <app-side-nav [isNavOpened]="isNavOpened"></app-side-nav>
+      <div class="button" (click)="isNavOpened = !isNavOpened" matRipple>
+        <mat-icon class="material-icons-outlined">{{ isNavOpened ? 'arrow_circle_left' :
+          'arrow_circle_right'}}</mat-icon>
+      </div>
+>>>>>>> d597b8009137887d6f9d0e5f516bea989ce41987
     </div>
+    <div class="container">
+
+    </div>
+  </div>
 </div>

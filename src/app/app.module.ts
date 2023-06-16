@@ -15,8 +15,12 @@ import  { MatButtonModule } from '@angular/material/button'
 import  { MatInputModule } from '@angular/material/input'
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { SideNavComponent } from './side-nav/side-nav.component';
+<<<<<<< HEAD
 import { HealthAssistantComponent } from './health-assistant/health-assistant.component';
 import { AboutComponent } from './about/about.component';
+=======
+import { MatRippleModule } from '@angular/material/core';
+>>>>>>> d597b8009137887d6f9d0e5f516bea989ce41987
 
 @NgModule({
   declarations: [
@@ -33,6 +37,7 @@ import { AboutComponent } from './about/about.component';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatRippleModule,
     NgxsModule.forRoot([
       QuestionnaireState
     ]),

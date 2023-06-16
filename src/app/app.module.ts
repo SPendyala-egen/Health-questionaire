@@ -18,17 +18,21 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { HealthAssistantComponent } from './health-assistant/health-assistant.component';
 import { AboutComponent } from './about/about.component';
 import { MatRippleModule } from '@angular/material/core';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavComponent,
     HealthAssistantComponent,
-    AboutComponent
+    AboutComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
     MatSlideToggleModule,
     MatIconModule,

@@ -1,6 +1,7 @@
 <div class="nav-container">
     <ng-container *ngFor="let item of navList">
-        <div class="item" [class.not-opened]="!isNavOpened" matRipple>
+        <div class="item" [class.not-opened]="!isNavOpened" matRipple  
+        [routerLink]="item.key" routerLinkActive="selected">
             <span *ngIf="isNavOpened">{{item.value}}</span>
             <mat-icon class="material-icons-outlined" [class.opened]="isNavOpened">{{item.icon}}</mat-icon>
         </div>

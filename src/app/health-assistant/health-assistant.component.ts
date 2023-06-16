@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-health-assistant',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HealthAssistantComponent {
 
+  chatControl: FormControl = new FormControl('');
 }

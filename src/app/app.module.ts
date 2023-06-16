@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import {  NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
@@ -21,6 +21,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageViewComponent } from './health-assistant/message-view/message-view.component';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [
@@ -28,19 +30,22 @@ import { HttpClientModule } from '@angular/common/http';
     SideNavComponent,
     HealthAssistantComponent,
     AboutComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessageViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSlideToggleModule,
     MatIconModule,
     MatButtonModule,
     MatInputModule,
     MatRippleModule,
     HttpClientModule,
+    TextFieldModule,
     NgxsModule.forRoot([
       QuestionnaireState
     ]),

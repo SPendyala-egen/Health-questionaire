@@ -1,1 +1,20 @@
-<p>health-assistant works!</p>
+<div class="assistant-container">
+    <div class="history">
+
+    </div>
+    <div class="new-message">
+        <mat-form-field>
+            <mat-label>Chat</mat-label>
+            <textarea
+            matInput
+            cdkTextareaAutosize
+            placeholder="Type here"
+            [formControl]="chatControl"
+            ></textarea>
+            <div matSuffix class="send" matRipple>
+                <span>Send</span>
+                <mat-icon matIconSuffix>send</mat-icon>
+            </div>
+        </mat-form-field>
+    </div>
+</div>

@@ -7,7 +7,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class SideNavComponent {
 
-  @Input() isNavOpened: boolean = false;
+  @Input() isNavOpened = false;
   
   navList= [
     {

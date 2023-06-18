@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ChatModel } from 'src/app/state/app.models';
 
 @Component({
   selector: 'app-message-view',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class MessageViewComponent {
 
+  @Input() data: ChatModel | null = null
 }

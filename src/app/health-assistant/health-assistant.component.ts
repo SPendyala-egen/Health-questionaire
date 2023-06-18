@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Store } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
 import { GetQuestionResponse } from '../state/app.actions';
+import { QuestionnaireState } from '../state/app.state';
+import { Observable } from 'rxjs';
+import { ChatModel } from '../state/app.models';
 
 @Component({
   selector: 'app-health-assistant',
@@ -11,6 +14,9 @@ import { GetQuestionResponse } from '../state/app.actions';
 export class HealthAssistantComponent {
 
   chatControl: FormControl = new FormControl('');
+
+  @Select(QuestionnaireState.chatDetails)
+  chat$!: Observable<ChatModel[]>;
 
   constructor(private store: Store) {}
 

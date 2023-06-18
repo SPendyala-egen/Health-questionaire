@@ -1,6 +1,8 @@
 <div class="assistant-container">
     <div class="history">
-        <app-message-view></app-message-view>
+        <ng-container *ngFor="let chat of chat$ | async">
+            <app-message-view></app-message-view>
+        </ng-container>
     </div>
     <div class="new-message">
         <mat-form-field>

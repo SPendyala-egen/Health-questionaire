@@ -10,6 +10,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 1rem;
+        overflow: scroll;
+        padding-right: 0.75rem;
+
+        app-message-view {
+            &:not(:first-child) {
+                margin: 0.5rem 0;
+            }
+        }
     }
 
     .new-message {

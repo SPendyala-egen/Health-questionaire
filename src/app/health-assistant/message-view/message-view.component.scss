@@ -5,15 +5,23 @@
 
     .position {
     display: flex;
+    flex-direction: column;
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: fit-content;
+    max-width: 50%;
     min-height: 2rem;
     background-color: rgb(2, 249, 249);
 
         .time-stamp {
             span {
                 font-size: 0.5rem;
+            }
+        }
+
+        .response {
+            span {
+                font-size: 0.875rem;
             }
         }
     }

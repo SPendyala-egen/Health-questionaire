@@ -1,1 +1,8 @@
-<p>message-view works!</p>
+<div class="container" [class.question]="data?.type === ChatType.QUESTION"
+[class.response]="data?.type === ChatType.RESPONSE">
+    <div class="position">
+        <div class="time-stamp">
+            <span>{{data?.time | date: 'MM/dd/yyyy' }}</span>
+        </div>
+    </div>
+</div>

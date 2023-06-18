@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .position {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    min-height: 2rem;
+    background-color: rgb(2, 249, 249);
+
+        .time-stamp {
+            span {
+                font-size: 0.5rem;
+            }
+        }
+    }
+
+        
+    &.question {
+        flex-direction: row-reverse;
+    }
+
+    &.response {
+        flex-direction: row;
+    }
+}

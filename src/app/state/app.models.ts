@@ -1,4 +1,15 @@
 export interface QuestionnaireModel {
-    message: string;
-    zipCode: number;
+    chat: ChatModel[];
+    ipAddress: string;
+}
+
+export interface ChatModel {
+    message: string,
+    time: Date
+    type: ChatType
+}
+
+export enum ChatType {
+    QUESTION,
+    RESPONSE
 }

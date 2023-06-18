@@ -1,9 +1,9 @@
-export class QuestionResponse {
-    static readonly type = '[Questionnaire] Question Response';
+export class GetQuestionResponse {
+    static readonly type = '[Questionnaire] Get Question Response';
     constructor(public message: string){}
   }
 
-  export class UpdateZipCode {
-    static readonly type = '[API] Update Zip Code';
-    constructor(public zipCode: number){}
+  export class UpdateIPAddress {
+    static readonly type = '[API] Update Ip Address';
+    constructor(){}
   }

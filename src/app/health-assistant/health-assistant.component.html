@@ -11,7 +11,7 @@
             placeholder="Type here"
             [formControl]="chatControl"
             ></textarea>
-            <div matSuffix class="send" matRipple>
+            <div matSuffix class="send" matRipple (click)="onSend()">
                 <span>Send</span>
                 <mat-icon matIconSuffix>send</mat-icon>
             </div>

@@ -2,7 +2,7 @@
 [class.response]="data?.type === ChatType.RESPONSE">
     <div class="position">
         <div class="time-stamp">
-            <span>{{data?.time | date: 'MM/dd/yyyy' }}</span>
+            <span>{{data?.type === ChatType.RESPONSE ? 'Assistant: ' : ''}}{{data?.time | date: 'MM/dd/yyyy hh:mm:aa' }}</span>
         </div>
         <div class="response">
             <span> {{data?.message}} </span>

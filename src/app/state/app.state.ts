@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Action, Selector, State, StateContext } from "@ngxs/store";
-import { ChatType, QuestionnaireModel } from "./app.models";
+import { ChatType, QuestionnaireModel, ResponseGptModel } from "./app.models";
 import { AppServiceService } from "../app-service/app-service.service";
 import { GetQuestionResponse, UpdateIPAddress } from "./app.actions";
 import { tap } from "rxjs";
@@ -43,13 +43,14 @@ export class QuestionnaireState {
       ],
     });
 
-    return this.appSearvice.getQuestionResponse(action.message).pipe(
-      tap((resp: string) => {
+    return this.appSearvice.getQuestionResponse(action.message, ctx.getState().ipAddress).pipe(
+      tap((resp: ResponseGptModel) => {
         ctx.patchState({
           chat: [
             ...ctx.getState().chat,
+
             {
-              message: resp,
+              message: resp.response,
               time: new Date(),
               type: ChatType.RESPONSE,
             },

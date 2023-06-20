@@ -3,6 +3,10 @@ export interface QuestionnaireModel {
     ipAddress: string;
 }
 
+export interface ResponseGptModel {
+    response: string
+}
+
 export interface ChatModel {
     message: string,
     time: Date

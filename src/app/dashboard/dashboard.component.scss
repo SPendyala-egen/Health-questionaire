@@ -1,0 +1,16 @@
+.image {
+    // padding-left: 16rem;
+    // padding-top: 4rem;
+    background-image: url("../../assets/chatgpt2.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: calc(100% - 2rem);
+    display: flex;
+}
+
+img {
+    align-items: center;
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
+}
+
